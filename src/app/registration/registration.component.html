@@ -1,0 +1,231 @@
+<section class="welcome-to register">
+  <div class="form-wrapper auth-form form-register">
+    <div class="form-title">
+      <h1 class=" m-0">Registration</h1>
+      <p class="m-0">Type your data and hit Yalla!</p>
+    </div>
+    <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+      <div class="row">
+        <div class="col-12 mx-auto">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Name</span>
+            </div>
+            <input type="text" [(ngModel)]="user.firstName" required #firstName="ngModel" id="firstName"
+              name="firstName" class="form-control">
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Last Name</span>
+            </div>
+            <input type="text" [(ngModel)]="user.secondName" required #secondName="ngModel" id="secondName"
+              name="secondName" class="form-control">
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Email</span>
+            </div>
+            <input type="text" [(ngModel)]="user.email" required #email="ngModel" id="email" name="email"
+              class="form-control">
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Password</span>
+            </div>
+            <input type="password" [(ngModel)]="user.password" required #password="ngModel" id="password"
+              name="password" class="form-control">
+          </div>
+
+          <div class="checkbox">
+            <input type="checkbox" class="checkbox checkbox-primary" id="customControlInline">
+            <label class="custom-control-label" for="customControlInline">I agree to the <a href="#">terms of use</a>
+              and <a href="#">privacy policy</a>.</label>
+          </div>
+          <button type="submit" [disabled]="!userForm.form.valid" class="btn btn-red btn-yalla">Y’alla!</button>
+        </div>
+      </div>
+    </form>
+    <span class="skewed-red-border"></span>
+  </div>
+</section>
+<section class="promo-banner">
+  <span class="skewed-red-border"></span>
+  <div class="container">
+    <div class="row d-flex align-items-center">
+      <div class="col-lg-3">
+        <div class="section-heading">
+          <h1>NEVER MISTAKEN <br>FOR Anything else</h1>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <p class="promo-text pr-lg-5 mr-lg-5">Candy canes topping dessert jelly beans pie jelly beans sweet roll. Toffee
+          cotton candy cake chocolate cake. Bonbon gummi bears jelly-o bonbon fruitcake tootsie roll cake cookie
+          gingerbread. Icing wafer pie pudding ice cream bonbon
+          halvah bonbon topping. Donut halvah tiramisu bear claw tart.</p>
+      </div>
+      <div class="col-lg-3">
+        <h3 class="promo-caption">Affordable prices Guaranteed cars</h3>
+        <a href="#" class="btn btn-red btn-promo">Join now!</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="most-popular">
+  <div class="container">
+    <div class="row d-flex align-items-center">
+      <div class="col-lg-6">
+        <div class="section-heading">
+          <span>3</span>
+          <h1>MOST POPULAR <br>CHOICES IN YOUr area</h1>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <p class="popular-caption pr-lg-5 mr-lg-5">Candy canes topping dessert jelly beans pie jelly beans sweet roll.
+          Toffee cotton candy cake chocolate cake. Bonbon gummi bears jelly-o bonbon fruitcake tootsie roll cake cookie
+          gingerbread. Icing wafer pie pudding ice cream bonbon
+          halvah bonbon topping. Donut halvah tiramisu bear claw tart.</p>
+      </div>
+    </div>
+  </div>
+  <div class="skewed-blocks-wrapper">
+    <div class="skew-block-inner">
+      <div class="most-popular-owl owl-carousel owl-theme" id="mostPopularOwl">
+        <div class="skewed-block">
+          <div class="skewed-img"><img src="../../assets/images/car1-skewed.png"></div>
+          <div class="block-detail">
+            <h3 class="car-name">REDDEVIL</h3>
+            <h1 class="car-price">230</h1>
+          </div>
+        </div>
+        <div class="skewed-block">
+          <div class="skewed-img"><img src="../../assets/images/car2-skewed.png"></div>
+          <div class="block-detail">
+            <h3 class="car-name">BLACKSTAR</h3>
+            <h1 class="car-price">300</h1>
+          </div>
+        </div>
+        <div class="skewed-block">
+          <div class="skewed-img"><img src="../../assets/images/car3-skewed.png"></div>
+          <div class="block-detail">
+            <h3 class="car-name">PneumoDaddy</h3>
+            <h1 class="car-price">180</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="latest-feeds">
+  <div class="container">
+
+    <div class="section-heading">
+      <h1>Latest FEEDBACKS <br>fROM our customers</h1>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="feed-block d-flex">
+          <div class="img-wrap">
+            <img src="../../assets/images/feeds-avatar.jpg">
+          </div>
+          <div class="feed-detail">
+            <p class="line-clamp line-clamp-2 mb-0">Candy canes topping dessert jelly beans pie jelly beans sweet roll.
+              Toffee cotton candy cake chocolate cake. Bonbon gummi bears jelly-o bonbon fruitcake tootsie roll cake
+              cookie gingerbread. Icing wafer pie pudding ice
+              cream bonbon halvah bonbon topping. Donut halvah tiramisu bear claw tart.</p>
+            <div class="feed-footer">
+              <a href="#" class="feed-by">Candy Miles</a>
+              <span class="feed-at">22 September 2019</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="feed-block d-flex">
+          <div class="img-wrap">
+            <img src="../../assets/images/feeds-avatar.jpg">
+          </div>
+          <div class="feed-detail">
+            <p class="line-clamp line-clamp-2 mb-0">Candy canes topping dessert jelly beans pie jelly beans sweet roll.
+              Toffee cotton candy cake chocolate cake. Bonbon gummi bears jelly-o bonbon fruitcake tootsie roll cake
+              cookie gingerbread. Icing wafer pie pudding ice
+              cream bonbon halvah bonbon topping. Donut halvah tiramisu bear claw tart.</p>
+            <div class="feed-footer">
+              <a href="#" class="feed-by">Candy Miles</a>
+              <span class="feed-at">22 September 2019</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="feed-block d-flex">
+          <div class="img-wrap">
+            <img src="../../assets/images/feeds-avatar.jpg">
+          </div>
+          <div class="feed-detail">
+            <p class="line-clamp line-clamp-2 mb-0">Candy canes topping dessert jelly beans pie jelly beans sweet roll.
+              Toffee cotton candy cake chocolate cake. Bonbon gummi bears jelly-o bonbon fruitcake tootsie roll cake
+              cookie gingerbread. Icing wafer pie pudding ice
+              cream bonbon halvah bonbon topping. Donut halvah tiramisu bear claw tart.</p>
+            <div class="feed-footer">
+              <a href="#" class="feed-by">Candy Miles</a>
+              <span class="feed-at">22 September 2019</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="feed-block d-flex">
+          <div class="img-wrap">
+            <img src="../../assets/images/feeds-avatar.jpg">
+          </div>
+          <div class="feed-detail">
+            <p class="line-clamp line-clamp-2 mb-0">Candy canes topping dessert jelly beans pie jelly beans sweet roll.
+              Toffee cotton candy cake chocolate cake. Bonbon gummi bears jelly-o bonbon fruitcake tootsie roll cake
+              cookie gingerbread. Icing wafer pie pudding ice
+              cream bonbon halvah bonbon topping. Donut halvah tiramisu bear claw tart.</p>
+            <div class="feed-footer">
+              <a href="#" class="feed-by">Candy Miles</a>
+              <span class="feed-at">22 September 2019</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="feed-block d-flex">
+          <div class="img-wrap">
+            <img src="../../assets/images/feeds-avatar.jpg">
+          </div>
+          <div class="feed-detail">
+            <p class="line-clamp line-clamp-2 mb-0">Candy canes topping dessert jelly beans pie jelly beans sweet roll.
+              Toffee cotton candy cake chocolate cake. Bonbon gummi bears jelly-o bonbon fruitcake tootsie roll cake
+              cookie gingerbread. Icing wafer pie pudding ice
+              cream bonbon halvah bonbon topping. Donut halvah tiramisu bear claw tart.</p>
+            <div class="feed-footer">
+              <a href="#" class="feed-by">Candy Miles</a>
+              <span class="feed-at">22 September 2019</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="feed-block d-flex">
+          <div class="img-wrap">
+            <img src="../../assets/images/feeds-avatar.jpg">
+          </div>
+          <div class="feed-detail">
+            <p class="line-clamp line-clamp-2 mb-0">Candy canes topping dessert jelly beans pie jelly beans sweet roll.
+              Toffee cotton candy cake chocolate cake. Bonbon gummi bears jelly-o bonbon fruitcake tootsie roll cake
+              cookie gingerbread. Icing wafer pie pudding ice
+              cream bonbon halvah bonbon topping. Donut halvah tiramisu bear claw tart.</p>
+            <div class="feed-footer">
+              <a href="#" class="feed-by">Candy Miles</a>
+              <span class="feed-at">22 September 2019</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
