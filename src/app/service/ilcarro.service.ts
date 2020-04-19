@@ -5,6 +5,7 @@ import { User } from '../models/user';
 import { catchError, map, tap, retry, filter } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
 import { DatePipe } from '@angular/common';
+import { UserComment } from '../models/user-comment';
 
 @Injectable({
   providedIn: 'root'
@@ -20,9 +21,9 @@ export class IlcarroService {
     );
   }
 
-  public getLatestFeeds(): Observable<Comment[]> {
+  public getLatestFeeds(): Observable<UserComment[]> {
 
-    return this.http.get<Comment[]>('http://localhost:8860/api/comments').pipe(
+    return this.http.get<UserComment[]>('http://localhost:8860/api/comments').pipe(
       retry(1),
       catchError(this.handleError)
     );
@@ -40,7 +41,7 @@ export class IlcarroService {
 
   public getMostPopular(): Observable<any[]> {
 
-    return this.http.get<Comment[]>('http://localhost:8860/api/car/best').pipe(
+    return this.http.get<any[]>('http://localhost:8860/api/car/best').pipe(
       retry(1),
       catchError(this.handleError)
     );

@@ -15,6 +15,7 @@ import { FindCarComponent } from './find-car/find-car.component';
 import { FindCarResultComponent } from './find-car-result/find-car-result.component';
 import { AuthInterceptor } from './auth-interceptor';
 import { DatePipe } from '@angular/common';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { DatePipe } from '@angular/common';
     MostPopularComponent,
     LatestFeedsComponent,
     FindCarComponent,
-    FindCarResultComponent
+    FindCarResultComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
