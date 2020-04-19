@@ -1,0 +1,41 @@
+<section class="latest-feeds">
+  <div class="container">
+
+    <div class="section-heading">
+      <h1>Latest FEEDBACKS <br>fROM our customers</h1>
+    </div>
+    <div class="row">
+      <div class="col-lg-6" *ngFor="let comment of comments">
+        <div class="feed-block d-flex">
+          <div class="img-wrap">
+            <img src="{{comment.photoUrl}}">
+          </div>
+          <div class="feed-detail">
+            <p class="line-clamp line-clamp-2 mb-0">{{comment.post}}</p>
+            <div class="feed-footer">
+              <a href="#" class="feed-by">{{comment.firstName}} {{comment.secondName}}</a>
+              <span class="feed-at">{{comment.postDate}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="col-lg-6">
+        <div class="feed-block d-flex">
+          <div class="img-wrap">
+            <img src="../../assets/images/feeds-avatar.jpg">
+          </div>
+          <div class="feed-detail">
+            <p class="line-clamp line-clamp-2 mb-0">Candy canes topping dessert jelly beans pie jelly beans sweet roll.
+              Toffee cotton candy cake chocolate cake. Bonbon gummi bears jelly-o bonbon fruitcake tootsie roll cake
+              cookie gingerbread. Icing wafer pie pudding ice
+              cream bonbon halvah bonbon topping. Donut halvah tiramisu bear claw tart.</p>
+            <div class="feed-footer">
+              <a href="#" class="feed-by">Candy Miles</a>
+              <span class="feed-at">22 September 2019</span>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</section>

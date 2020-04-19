@@ -21,8 +21,13 @@ export class RegistrationComponent implements OnInit {
   }
 
   onSubmit() {
-    this.ilcarroService.register(this.user).subscribe(result => {
-      alert(result);
+    this.ilcarroService.register(this.user).subscribe(data => {
+      // navigate to register
+      alert(data);
+    }, err => {
+      // tslint:disable-next-line: no-debugger
+      debugger;
+      alert(err);
     });
   }
 
