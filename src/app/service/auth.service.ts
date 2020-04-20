@@ -2,41 +2,39 @@ import { LoginModel } from './../models/login-model';
 import { Auth } from './../models/auth';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
-import { retry, catchError } from 'rxjs/operators';
+import { Observable, throwError, of } from 'rxjs';
+import { retry, catchError, tap, mapTo } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
+  readonly AUTH_TOKEN = 'AUTH_TOKEN';
   constructor(private http: HttpClient) { }
 
-  public login(loginModel: LoginModel) {
+  public login(loginModel: LoginModel): Observable<boolean> {
 
-    return this.http.post<Auth>('http://localhost:8860/login', loginModel).pipe(
-      retry(1),
-      catchError(this.handleError)
+    return this.http.post<any>('http://localhost:8860/login', loginModel).pipe(
+      tap(authResult => this.setToken(authResult)),
+      mapTo(true),
+      catchError(err => this.handleError(err))
     );
 
   }
 
-  public callLogin(loginModel: LoginModel) {
+  private setToken(authResult: Auth) {
 
-    this.login(loginModel).subscribe(this.setSession, this.handleError);
-
+    console.log('setting id token: ' + authResult.token);
+    localStorage.setItem(this.AUTH_TOKEN, authResult.token);
   }
 
-  private setSession(authResult: Auth) {
+  isLoggedIn() {
+    return !!this.getAuthToken();
+  }
 
-    // tslint:disable-next-line: no-debugger
-    debugger;
-    if (authResult.status === 'true') {
-      console.log('setting id token: ' + authResult.token);
-      localStorage.setItem('auth_token', authResult.token);
-    } else {
-      return throwError('invalid username/password');
-    }
+  getAuthToken() {
+    return localStorage.getItem(this.AUTH_TOKEN);
   }
 
   handleError(err) {
@@ -45,12 +43,12 @@ export class AuthService {
     let errorMessage = '';
     if (err.error instanceof ErrorEvent) {
       // client-side error
-      errorMessage = `Error: ${err.error.message}`;
+      errorMessage = 'Error: ' + err.error.message;
     } else {
       // server-side error
-      errorMessage = ` ${err.status}: ${err.message}`;
+      errorMessage = err.status + ': ' + err.error.message;
     }
-    alert('invalid username/password');
-    return throwError(errorMessage);
+    alert(errorMessage);
+    return of(false);
   }
 }

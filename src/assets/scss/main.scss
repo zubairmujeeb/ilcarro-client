@@ -2,25 +2,25 @@
 
 /* VARBIABLES */
 
-$color-white: #FFFFFF;
+$color-white: #ffffff;
 $color-primary: #062639;
-$color-secondary: #EA2340;
-$color-darkgray: #5F727E;
+$color-secondary: #ea2340;
+$color-darkgray: #5f727e;
 $color-darkgray-1: rgba(0, 0, 0, 0.369);
 $color-darkgray-2: rgba(0, 0, 0, 0.322);
-$color-lightgray: #6C7E8B;
+$color-lightgray: #6c7e8b;
 
 /* GLOBAL VARIABLES */
 
-$font-primary: 'Raleway',
+$font-primary: "Raleway",
 sans-serif;
-$font-secondary: 'Bebas Neue',
+$font-secondary: "Bebas Neue",
 cursive;
-$transition: .25s ease-in-out;
+$transition: 0.25s ease-in-out;
 
 /* SHADOW VARIABLES */
 
-$dropdown-shadow: 0 5px 10px rgba($color: $color-primary, $alpha: .25);
+$dropdown-shadow: 0 5px 10px rgba( $color: $color-primary, $alpha: 0.25, );
 
 /* NAV VARIABLES */
 
@@ -78,7 +78,7 @@ footer {
         li {
             list-style: none;
             float: left;
-            margin: .5rem 0 .5rem 3rem !important;
+            margin: 0.5rem 0 0.5rem 3rem !important;
             a {
                 i {
                     color: $color-white;
@@ -88,7 +88,7 @@ footer {
                     align-items: center;
                     justify-content: center;
                     position: relative;
-                    font-size: 1.5rem
+                    font-size: 1.5rem;
                 }
                 .fa-facebook-f {
                     background: $color-white;
@@ -96,8 +96,8 @@ footer {
                     color: $color-primary;
                     &:before {
                         position: absolute;
-                        bottom: -.1rem;
-                        right: .45rem;
+                        bottom: -0.1rem;
+                        right: 0.45rem;
                         font-size: 1.5rem;
                     }
                 }
@@ -261,11 +261,11 @@ footer {
         }
         .footer-navbar-nav {
             display: inline-block;
-            border-top: 1px solid rgba($color: $color-white, $alpha: .5);
+            border-top: 1px solid rgba($color: $color-white, $alpha: 0.5);
             border-bottom: 0;
             li {
                 margin: 0;
-                border-bottom: 1px solid rgba($color: $color-white, $alpha: .5);
+                border-bottom: 1px solid rgba($color: $color-white, $alpha: 0.5);
                 display: block;
                 float: none;
                 text-align: center;
@@ -295,7 +295,7 @@ footer {
     @media screen and (max-width: 414px) {
         .social-links {
             li {
-                margin: 0 .75rem !important;
+                margin: 0 0.75rem !important;
             }
         }
     }
@@ -340,20 +340,20 @@ header {
             margin-left: 2rem;
             transition: $transition;
             .nav-link {
-                margin: 1rem .75rem 0;
+                margin: 1rem 0.75rem 0;
                 color: $color-white !important;
                 font-weight: bold;
                 position: relative;
                 line-height: 1.1875rem;
                 font-size: 0.8rem;
                 font-weight: 600;
-                padding: .25rem 1rem 1rem;
+                padding: 0.25rem 1rem 1rem;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 position: relative;
                 img {
-                    margin-right: .25rem;
+                    margin-right: 0.25rem;
                 }
                 &:hover {
                     color: $color-darkgray;
@@ -368,10 +368,10 @@ header {
                     color: $color-white;
                     background: $color-secondary;
                     &:after {
-                        content: '';
+                        content: "";
                         background: $color-secondary;
                         position: absolute;
-                        bottom: -.5rem;
+                        bottom: -0.5rem;
                         left: 0;
                         height: 10px;
                         width: 100%;
@@ -477,7 +477,7 @@ header {
 .sidebar-overlay {
     display: none;
     transition: all $transition;
-    background: rgba($color: $color-primary, $alpha: .75);
+    background: rgba($color: $color-primary, $alpha: 0.75);
     position: fixed;
     z-index: 1021;
     width: 100%;
@@ -507,7 +507,7 @@ header {
                 overflow-y: auto;
                 &.show {
                     right: 0;
-                    box-shadow: -2px 0 10px rgba($color: #000000, $alpha: .75);
+                    box-shadow: -2px 0 10px rgba($color: #000000, $alpha: 0.75);
                     .close-sidebar-btn {
                         display: block;
                     }
@@ -518,12 +518,12 @@ header {
                     margin: 2.5rem 0 !important;
                     .nav-link {
                         margin: 1rem 0;
-                        padding: .5rem;
+                        padding: 0.5rem;
                         font-size: 1.25rem;
                         height: auto;
                         justify-content: flex-start;
                         img {
-                            margin-right: .5rem;
+                            margin-right: 0.5rem;
                         }
                     }
                     &.active,
@@ -602,7 +602,7 @@ header {
 
 .btn {
     border-radius: 0;
-    padding: .5rem 1.5rem;
+    padding: 0.5rem 1.5rem;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.32);
     font-size: 1.125rem;
     &.btn-yalla {
@@ -621,12 +621,12 @@ header {
     border-color: $color-lightgray;
     width: 100%;
     button {
-        margin: 0 .2rem !important;
+        margin: 0 0.2rem !important;
         background: none;
         border-color: $color-lightgray;
         border-radius: 0 !important;
         color: $color-lightgray;
-        font-size: .8rem;
+        font-size: 0.8rem;
         &.active {
             background: $color-lightgray;
             color: #fff;
@@ -659,7 +659,7 @@ header {
     position: absolute;
     overflow: hidden;
     &:after {
-        content: '';
+        content: "";
         background: $color-secondary;
         transform: skew(60deg);
         margin-left: -1.5rem;
@@ -671,7 +671,7 @@ header {
 /* RADIO / CHECK */
 
 .checkbox {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     a {
         text-decoration: underline;
         color: $color-darkgray;
@@ -696,14 +696,14 @@ header {
         font-weight: normal;
         margin-bottom: 0;
         line-height: 1.5;
-        font-size: .9rem;
+        font-size: 0.9rem;
         color: $color-darkgray;
         text-indent: 2rem;
         &::before {
             -o-transition: 0.3s ease-in-out;
             -webkit-transition: 0.3s ease-in-out;
             background-color: $color-white;
-            border-radius: .1rem;
+            border-radius: 0.1rem;
             border: 1px solid $color-secondary;
             content: "";
             display: inline-block;
@@ -873,106 +873,7 @@ header {
         p {
             color: $color-darkgray;
             line-height: 1;
-            font-size: .9rem;
-        }
-    }
-    .nav-tabs {
-        position: absolute;
-        top: -3.25rem;
-        left: -1.5rem;
-        width: 100%;
-        border: 0;
-        .nav-item {
-            transform: skew(45deg, 0);
-            display: inline-block;
-            width: auto;
-            position: absolute;
-            left: 0;
-            top: 0;
-            z-index: 1;
-            text-align: right;
-            border: 0;
-            border-right: .25rem solid $color-white;
-            &.active {
-                border-right: 0;
-                top: -0.65rem;
-                left: -1rem;
-                &:after {
-                    content: '';
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    width: 610px;
-                    height: 5px;
-                }
-            }
-            .nav-link {
-                color: $color-white;
-                transform: skew(-45deg, 0);
-                border: 0;
-                padding: .5rem 2rem;
-                width: 100%;
-                transition: all $transition;
-                span {
-                    font-size: .9rem;
-                    margin-left: .5rem;
-                    margin-right: 1rem;
-                    display: none;
-                    text-align: left;
-                }
-                i {
-                    font-size: 1.5rem;
-                }
-                &.active {
-                    padding: 1rem 0;
-                    background: transparent !important;
-                    span {
-                        display: inline-block;
-                    }
-                }
-            }
-            &:nth-child(1) {
-                background: $color-secondary !important;
-                z-index: 2;
-                .nav-link {
-                    padding-left: 16rem !important;
-                }
-                &.active {
-                    &:after {
-                        background: $color-secondary;
-                    }
-                }
-            }
-            &:nth-child(2) {
-                background: $color-primary !important;
-                z-index: 1;
-                .nav-link {
-                    padding-left: 23rem !important;
-                    &.active {
-                        padding-left: 22rem !important;
-                    }
-                }
-                &.active {
-                    &:after {
-                        background: $color-primary;
-                    }
-                }
-            }
-            &:nth-child(3) {
-                background: $color-lightgray !important;
-                z-index: 0;
-                .nav-link {
-                    padding-left: 28rem !important;
-                    &.active {
-                        padding-left: 28rem !important;
-                    }
-                }
-                &.active {
-                    &:after {
-                        background: $color-lightgray;
-                    }
-                }
-            }
+            font-size: 0.9rem;
         }
     }
     .skewed-red-border {
@@ -985,7 +886,7 @@ header {
         display: block;
         margin: 4rem 0 1.5rem;
         font-size: 0.813rem;
-        color: #5F727E;
+        color: #5f727e;
         line-height: 1;
         .price-range-txt {
             float: right;
@@ -1042,22 +943,25 @@ header {
         display: flex;
         align-items: center;
         padding: 1rem;
-        max-width: 500px;
+        max-width: 600px;
         width: 100%;
         position: relative;
         // overflow: hidden;
         display: block;
+        @media screen and (max-width: 600px) {
+            min-width: 100%;
+        }
         &.form-find-car {
             margin-right: auto;
             padding: 1.5rem 1.5rem 1.5rem 10rem;
-            min-width: 600px;
-            @media screen and (max-width: 600px) {
-                padding: 1.5rem;
-                min-width: 100%;
+            min-width: 500px;
+            @media screen and (max-width: 1366px) {
+                padding-left: 1.5rem;
+                min-width: 400px;
             }
             .skewed-red-border {
-                bottom: .5rem;
-                right: .5rem;
+                bottom: 0.5rem;
+                right: 0.5rem;
                 &:after {
                     width: 4.177rem;
                     height: 0.6rem;
@@ -1073,6 +977,93 @@ header {
                 min-height: 100vh;
                 @media screen and (max-width: 1000px) {
                     min-height: auto;
+                }
+            }
+            &.border-search {
+                border-top: 4px solid $color-secondary;
+            }
+            &.border-filter {
+                border-top: 4px solid $color-primary;
+            }
+            &.border-location {
+                border-top: 4px solid $color-lightgray;
+            }
+        }
+        .nav-tabs {
+            position: absolute;
+            top: -3.25rem;
+            left: -2rem;
+            width: 100%;
+            border: 0;
+            .nav-item {
+                transform: skew(45deg, 0);
+                display: inline-block;
+                width: auto;
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 1;
+                text-align: right;
+                border: 0;
+                border-right: 0.25rem solid $color-white;
+                &.active {
+                    border-right: 0;
+                    top: -0.65rem;
+                    left: -1rem;
+                }
+                .nav-link {
+                    color: $color-white;
+                    transform: skew(-45deg, 0);
+                    border: 0;
+                    padding: 0.5rem 2rem;
+                    width: 100%;
+                    transition: all $transition;
+                    span {
+                        font-size: 0.9rem;
+                        margin-left: 0.5rem;
+                        display: none;
+                        text-align: left;
+                        @media screen and (max-width: 600px) {
+                            display: none !important;
+                        }
+                    }
+                    i {
+                        font-size: 1.5rem;
+                    }
+                    &.active {
+                        padding: 1rem 2rem;
+                        background: transparent !important;
+                        span {
+                            display: inline-block;
+                        }
+                    }
+                }
+                &:nth-child(1) {
+                    background: $color-secondary !important;
+                    z-index: 2;
+                    .nav-link {
+                        padding-left: 16rem !important;
+                    }
+                }
+                &:nth-child(2) {
+                    background: $color-primary !important;
+                    z-index: 1;
+                    .nav-link {
+                        padding-left: 23rem !important;
+                        &.active {
+                            padding-left: 22rem !important;
+                        }
+                    }
+                }
+                &:nth-child(3) {
+                    background: $color-lightgray !important;
+                    z-index: 0;
+                    .nav-link {
+                        padding-left: 28rem !important;
+                        &.active {
+                            padding-left: 28rem !important;
+                        }
+                    }
                 }
             }
         }
@@ -1183,12 +1174,14 @@ input,
             max-height: 100vh;
             overflow-y: auto;
             overflow-x: hidden;
-            padding-left: 5rem;
+            padding: 0 1rem 0 5rem;
             margin-top: 3rem;
             .search-block {
                 margin-bottom: 2rem;
                 .img-wrap {
                     max-height: 375px;
+                    min-height: 300px;
+                    background: $color-lightgray;
                     img {
                         width: 100%;
                     }
@@ -1220,26 +1213,27 @@ input,
                         color: $color-primary;
                         text-align: center;
                         font-weight: 900;
-                        padding: .5rem 2.5rem 0;
+                        padding: 0.5rem 2.5rem 0;
                         font-size: 4rem;
                         line-height: 4rem;
                         margin: 0;
+                        min-width: 150px;
                         &:before {
                             font-family: $font-primary;
-                            content: '$';
+                            content: "$";
                             color: $color-primary;
                             font-size: 1.5rem;
                             position: absolute;
-                            top: .75rem;
+                            top: 0.75rem;
                             left: 1rem;
                             font-weight: 600;
                             line-height: 1;
                         }
                         &:after {
-                            content: 'per day';
+                            content: "per day";
                             position: absolute;
-                            right: -.5rem;
-                            top: .25rem;
+                            right: -0.5rem;
+                            top: 0.25rem;
                             transform: rotate(-90deg);
                             color: $color-darkgray;
                             font-size: 1.25rem;
@@ -1335,7 +1329,7 @@ section {
         color: $color-secondary;
         line-height: 1.1;
         font-weight: 900;
-        margin-bottom: .5rem;
+        margin-bottom: 0.5rem;
         @media screen and (max-width: 1680px) {
             font-size: 1.75rem;
         }
@@ -1349,7 +1343,7 @@ section {
         position: relative;
         padding: 1.5rem 0 3rem;
         &:before {
-            content: '';
+            content: "";
             position: absolute;
             left: -10rem;
             top: 0;
@@ -1360,7 +1354,7 @@ section {
             z-index: 0;
         }
         &:after {
-            content: '';
+            content: "";
             background: $color-primary;
             width: 100%;
             height: calc(100% + 3rem);
@@ -1375,6 +1369,8 @@ section {
             clip-path: polygon(0 0, 60% 0, 100% 100%, 40% 100%);
             margin: 0 -9rem 0 -18rem;
             background-size: cover;
+            max-height: 400px;
+            overflow: hidden;
             img {
                 width: 100%;
             }
@@ -1387,7 +1383,7 @@ section {
             font-family: $font-secondary;
             .car-name {
                 color: white;
-                padding: 0 .75rem;
+                padding: 0 0.75rem;
                 font-size: 2rem;
                 margin-bottom: 0;
                 line-height: 1;
@@ -1400,26 +1396,26 @@ section {
                 color: $color-secondary;
                 text-align: center;
                 font-weight: 900;
-                padding: .5rem 2.5rem 0;
+                padding: 0.5rem 2.5rem 0;
                 font-size: 5.5rem;
                 line-height: 5rem;
                 margin: 0;
                 &:before {
                     font-family: $font-primary;
-                    content: '$';
+                    content: "$";
                     color: $color-secondary;
                     font-size: 1.875rem;
                     position: absolute;
-                    top: .5rem;
-                    left: .75rem;
+                    top: 0.5rem;
+                    left: 0.75rem;
                     font-weight: 600;
                     line-height: 1;
                 }
                 &:after {
-                    content: 'per day';
+                    content: "per day";
                     position: absolute;
-                    right: -.5rem;
-                    top: .25rem;
+                    right: -0.5rem;
+                    top: 0.25rem;
                     transform: rotate(-90deg);
                     color: $color-darkgray;
                     font-size: 1.5rem;
@@ -1441,7 +1437,7 @@ section {
                 .car-price {
                     font-size: 4.5rem;
                     line-height: 4.5rem;
-                    padding: .5rem 2rem 0;
+                    padding: 0.5rem 2rem 0;
                     min-width: 160px;
                     &:before {
                         font-size: 1.5rem;
@@ -1486,7 +1482,7 @@ section {
                 .car-price {
                     font-size: 3.5rem;
                     line-height: 3.5rem;
-                    padding: .5rem 1rem 0;
+                    padding: 0.5rem 1rem 0;
                     min-width: 130px;
                     &:before {
                         font-size: 1.25rem;
@@ -1506,7 +1502,7 @@ section {
                     .owl-stage {
                         width: 100% !important;
                         .owl-item {
-                            margin-bottom: .5rem;
+                            margin-bottom: 0.5rem;
                             width: 33.33% !important;
                         }
                     }
@@ -1526,7 +1522,7 @@ section {
                 border-radius: 20px;
                 display: block;
                 height: 10px;
-                margin: 2rem .25rem 0;
+                margin: 2rem 0.25rem 0;
                 width: 10px;
             }
             &.active {
@@ -1589,26 +1585,26 @@ section {
             width: 90px;
             min-width: 90px;
             height: 90px;
-            margin-right: .25rem;
+            margin-right: 0.25rem;
             overflow: hidden;
             border-radius: 100%;
         }
         .feed-detail {
             p {
                 line-height: 1.25rem;
-                font-size: .9rem;
+                font-size: 0.9rem;
                 max-width: 500px;
             }
             .feed-footer {
-                margin-top: .5rem;
+                margin-top: 0.5rem;
                 a {
-                    font-size: .9rem;
+                    font-size: 0.9rem;
                     color: $color-secondary;
                     font-weight: 900;
                     margin-right: 2rem;
                 }
                 span {
-                    font-size: .9rem;
+                    font-size: 0.9rem;
                 }
             }
         }
