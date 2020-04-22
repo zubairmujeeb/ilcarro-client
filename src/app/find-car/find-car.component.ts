@@ -2,6 +2,7 @@ import { IlcarroService } from './../service/ilcarro.service';
 import { SearchFilters } from './../models/search-filters';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-find-car',
@@ -16,6 +17,7 @@ export class FindCarComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    $.getScript('/assets/js/main.js');
   }
 
   onSubmit(): void {
