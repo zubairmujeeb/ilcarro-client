@@ -1,7 +1,6 @@
 // JQUERY MASKING
-$('.date').mask('00/00/0000');
-$('.time').mask('00:00');
-
+$(".date").mask("00/00/0000");
+$(".time").mask("00:00");
 
 $(".form-find-car .nav-tabs").on("click", ".nav-item", function() {
     $(this).addClass("active").siblings().removeClass("active");
@@ -40,8 +39,7 @@ $(".sidebar-overlay").click(function() {
 
 // OWL JS
 $(document).ready(function() {
-
-    $('#mostPopularOwl').owlCarousel({
+    $("#mostPopularOwl").owlCarousel({
         loop: true,
         nav: true,
         width: 100,
@@ -50,28 +48,30 @@ $(document).ready(function() {
         dots: true,
         mouseDrag: false,
         responsiveClass: true,
-        navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
+        navText: [
+            "<i class='fa fa-chevron-left'></i>",
+            "<i class='fa fa-chevron-right'></i>",
+        ],
         responsive: {
             0: {
                 items: 1,
-                mouseDrag: true
+                mouseDrag: true,
             },
             600: {
                 items: 1,
-                mouseDrag: true
+                mouseDrag: true,
             },
             1000: {
                 items: 2,
-                mouseDrag: true
+                mouseDrag: true,
             },
             1280: {
                 items: 3,
                 nav: false,
                 dots: false,
                 loop: false,
-
-            }
-        }
+            },
+        },
     });
 });
 
@@ -80,23 +80,21 @@ $(window).on("load", function() {
     $("body .search-detail").mCustomScrollbar({
         autoHideScrollbar: true,
         theme: "rounded",
-        mouseWheelPixels: 1000
+        mouseWheelPixels: 1000,
     });
-
 });
 
 var $priceOfCar = $("#priceOfCar");
 
 $(function() {
-
     // Allocate Contribution Slider (Pre-Tax vs. Roth)
-    var $priceFilter = $('#priceOfCar');
+    var $priceFilter = $("#priceOfCar");
     var priceFilter;
-    var $priceFrom = $('#priceFrom');
-    var $priceTo = $('#priceTo');
+    var $priceFrom = $("#priceFrom");
+    var $priceTo = $("#priceTo");
 
     var calc = function(data) {
-        $priceFrom.html((data.from).toFixed(0));
+        $priceFrom.html(data.from.toFixed(0));
         $priceTo.html(data.to.toFixed(0));
 
         console.log(data.from);
@@ -104,7 +102,6 @@ $(function() {
 
     // Create "Unbiased " Slider
     var priceFilter = function() {
-
         $priceFilter.ionRangeSlider({
             skin: "round ",
             type: "double ",
@@ -123,7 +120,6 @@ $(function() {
             onChange: calc,
             onFinish: calc,
             onUpdate: calc,
-
         });
 
         priceFilter = $priceFilter.data("ionRangeSlider ");

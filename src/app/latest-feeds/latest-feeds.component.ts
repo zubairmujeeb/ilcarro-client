@@ -8,20 +8,21 @@ import { IlcarroService } from '../service/ilcarro.service';
   styleUrls: ['./latest-feeds.component.scss'],
 })
 export class LatestFeedsComponent implements OnInit {
-
   comments: any[];
-  constructor(private ilcarroService: IlcarroService) { }
+  constructor(private ilcarroService: IlcarroService) {}
 
   ngOnInit(): void {
-    this.ilcarroService.getLatestFeeds().subscribe(data => {
-      // tslint:disable-next-line: no-debugger
-      debugger;
-      this.comments = data;
-    }, err => {
-      // tslint:disable-next-line: no-debugger
-      debugger;
-      alert(err);
-    });
+    this.ilcarroService.getLatestFeeds().subscribe(
+      (data) => {
+        // tslint:disable-next-line: no-debugger
+        // debugger;
+        this.comments = data;
+      },
+      (err) => {
+        // tslint:disable-next-line: no-debugger
+        // debugger;
+        alert(err);
+      }
+    );
   }
-
 }

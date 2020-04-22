@@ -23,7 +23,8 @@ p {
 footer {
   background: #062639;
   color: #ffffff;
-  padding-top: 1rem;
+  padding-top: 0.5rem;
+  margin-top: 3rem;
   position: relative;
 }
 
@@ -124,9 +125,9 @@ footer .footer-skewed-block h1 {
   max-width: 400px;
   text-transform: uppercase;
   font-family: "Bebas Neue", cursive;
-  font-size: 3.375rem;
+  font-size: 3rem;
+  line-height: 3rem;
   float: left;
-  line-height: 3.375rem;
   color: #ffffff;
   position: absolute;
   left: 17%;
@@ -185,7 +186,7 @@ footer .footer-info {
 }
 
 footer .footer-info .brand-number {
-  font-size: 3.375rem;
+  font-size: 3rem;
   color: #ea2340;
   font-family: "Bebas Neue", cursive;
 }
@@ -966,7 +967,7 @@ header.sticky-top .navbar .navbar-brand img {
 
 .form-wrapper .form-title h1 {
   color: #ea2340;
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 900;
 }
 
@@ -1294,7 +1295,7 @@ input:focus,
   border-radius: 0;
   border-left: 0;
   border-color: #5f727e;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 900;
 }
 
@@ -1429,7 +1430,11 @@ input:focus,
 }
 
 section.most-popular {
-  padding: 5rem 0 4rem;
+  padding: 3rem 0;
+}
+
+section.most-popular .owl-stage-outer {
+  overflow: visible;
 }
 
 .promo-text {
@@ -1450,18 +1455,16 @@ section.most-popular {
   max-width: 400px;
   text-transform: uppercase;
   font-family: "Bebas Neue", cursive;
-  font-size: 3.375rem;
+  font-size: 3rem;
   float: left;
-  line-height: 3.375rem;
+  line-height: 3rem;
 }
 
 .section-heading span {
-  font-size: 9.313rem;
+  font-size: 9rem;
+  line-height: 9rem;
   float: left;
   font-family: "Bebas Neue", cursive;
-  float: left;
-  line-height: 9.313rem;
-  color: #ea2340;
 }
 
 @media screen and (max-width: 1680px) {
@@ -1524,16 +1527,16 @@ section.most-popular {
 }
 
 .promo-banner h3 {
-  font-size: 2rem;
-  color: #ea2340;
+  font-size: 1.75rem;
   line-height: 1.1;
+  color: #ea2340;
   font-weight: 900;
   margin-bottom: 0.5rem;
 }
 
 @media screen and (max-width: 1680px) {
   .promo-banner h3 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -1550,12 +1553,12 @@ section.most-popular {
 .skewed-blocks-wrapper .skew-block-inner:before {
   content: "";
   position: absolute;
-  left: -10rem;
+  left: -5rem;
   top: 0;
   height: 100%;
-  width: calc(100% + 220px);
-  -webkit-transform: skew(45deg);
-          transform: skew(45deg);
+  width: calc(100% + 150px);
+  -webkit-transform: skew(40deg);
+          transform: skew(40deg);
   background: #ea2340;
   z-index: 0;
 }
@@ -1574,16 +1577,25 @@ section.most-popular {
 .skewed-blocks-wrapper .skew-block-inner .skewed-img {
   position: relative;
   z-index: 1;
-  -webkit-clip-path: polygon(0 0, 60% 0, 100% 100%, 40% 100%);
-          clip-path: polygon(0 0, 60% 0, 100% 100%, 40% 100%);
-  margin: 0 -9rem 0 -18rem;
-  background-size: cover;
-  max-height: 400px;
+  -webkit-clip-path: polygon(0 0, 70% 0, 100% 100%, 30% 100%);
+          clip-path: polygon(0 0, 70% 0, 100% 100%, 30% 100%);
+  margin-left: -10rem;
+  margin-right: -7rem;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  min-height: 300px;
+  max-height: 300px;
   overflow: hidden;
 }
 
 .skewed-blocks-wrapper .skew-block-inner .skewed-img img {
   width: 100%;
+  max-height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 100% 40%;
+     object-position: 100% 40%;
 }
 
 .skewed-blocks-wrapper .skew-block-inner .block-detail {
@@ -1605,14 +1617,15 @@ section.most-popular {
 .skewed-blocks-wrapper .skew-block-inner .block-detail .car-price {
   background: #ffffff;
   position: relative;
-  min-width: 180px;
+  max-width: 175px;
+  max-width: 175px;
   -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.32);
           box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.32);
   color: #ea2340;
   text-align: center;
   font-weight: 900;
   padding: 0.5rem 2.5rem 0;
-  font-size: 5.5rem;
+  font-size: 5rem;
   line-height: 5rem;
   margin: 0;
 }
@@ -1621,9 +1634,9 @@ section.most-popular {
   font-family: "Raleway", sans-serif;
   content: "$";
   color: #ea2340;
-  font-size: 1.875rem;
+  font-size: 1.5rem;
   position: absolute;
-  top: 0.5rem;
+  top: 0.75rem;
   left: 0.75rem;
   font-weight: 600;
   line-height: 1;
@@ -1632,23 +1645,17 @@ section.most-popular {
 .skewed-blocks-wrapper .skew-block-inner .block-detail .car-price:after {
   content: "per day";
   position: absolute;
-  right: -0.5rem;
+  right: 0;
   top: 0.25rem;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
   color: #5f727e;
-  font-size: 1.5rem;
-}
-
-@media screen and (max-width: 1600px) {
-  .skewed-blocks-wrapper .skew-block-inner .skewed-img {
-    margin: 0 -7rem 0 -14rem;
-  }
+  font-size: 1.35rem;
 }
 
 @media screen and (max-width: 1400px) {
   .skewed-blocks-wrapper .skew-block-inner .block-detail {
-    bottom: -8rem;
+    bottom: -7rem;
   }
   .skewed-blocks-wrapper .skew-block-inner .block-detail .car-name {
     font-size: 1.75rem;
@@ -1672,61 +1679,51 @@ section.most-popular {
 
 @media screen and (max-width: 1280px) {
   .skewed-blocks-wrapper .skew-block-inner {
-    padding: 0;
-  }
-  .skewed-blocks-wrapper .skew-block-inner:before {
-    left: -12rem;
-  }
-  .skewed-blocks-wrapper .skew-block-inner .skewed-img {
-    margin: 0 -9rem 0 -18rem;
-  }
-  .skewed-blocks-wrapper .skew-block-inner .block-detail {
-    right: 3rem;
-    left: auto;
-    bottom: 0;
+    padding-bottom: 0;
   }
 }
 
 @media screen and (max-width: 1080px) {
-  .skewed-blocks-wrapper .skew-block-inner .skew-block-inner {
+  .skewed-blocks-wrapper .skew-block-inner {
     padding-bottom: 0;
   }
-  .skewed-blocks-wrapper .skew-block-inner .skew-block-inner:after {
-    padding-bottom: 0 !important;
+  .skewed-blocks-wrapper .skew-block-inner:after {
+    top: -1.5rem;
+    height: calc(100% + 4.5rem);
   }
-  .skewed-blocks-wrapper .skew-block-inner .skewed-img {
+  .skewed-blocks-wrapper .skewed-img {
     margin: 0;
   }
-  .skewed-blocks-wrapper .skew-block-inner .block-detail .car-name {
+  .skewed-blocks-wrapper .block-detail .car-name {
     font-size: 1.75rem;
     text-transform: uppercase;
   }
-  .skewed-blocks-wrapper .skew-block-inner .block-detail .car-price {
+  .skewed-blocks-wrapper .block-detail .car-price {
     font-size: 3.5rem;
     line-height: 3.5rem;
     padding: 0.5rem 1rem 0;
     min-width: 130px;
   }
-  .skewed-blocks-wrapper .skew-block-inner .block-detail .car-price:before {
+  .skewed-blocks-wrapper .block-detail .car-price:before {
     font-size: 1.25rem;
     top: 1rem;
   }
-  .skewed-blocks-wrapper .skew-block-inner .block-detail .car-price:after {
+  .skewed-blocks-wrapper .block-detail .car-price:after {
     font-size: 1rem;
   }
 }
 
 @media (min-width: 1280px) and (max-width: 4000px) {
-  .skewed-blocks-wrapper .skew-block-inner .owl-carousel {
+  .skewed-blocks-wrapper .owl-carousel {
     display: block !important;
   }
-  .skewed-blocks-wrapper .skew-block-inner .owl-carousel .owl-stage-outer {
+  .skewed-blocks-wrapper .owl-carousel .owl-stage-outer {
     overflow: visible;
   }
-  .skewed-blocks-wrapper .skew-block-inner .owl-carousel .owl-stage-outer .owl-stage {
+  .skewed-blocks-wrapper .owl-carousel .owl-stage-outer .owl-stage {
     width: 100% !important;
   }
-  .skewed-blocks-wrapper .skew-block-inner .owl-carousel .owl-stage-outer .owl-stage .owl-item {
+  .skewed-blocks-wrapper .owl-carousel .owl-stage-outer .owl-stage .owl-item {
     margin-bottom: 0.5rem;
     width: 33.33% !important;
   }
@@ -1814,6 +1811,17 @@ section.most-popular {
   margin-right: 0.25rem;
   overflow: hidden;
   border-radius: 100%;
+  background-color: #eee;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .latest-feeds .feed-block .feed-detail p {
