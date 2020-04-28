@@ -47,6 +47,42 @@ export class IlcarroService {
     return this.http.get<any>(url).pipe(retry(1), catchError(this.handleError));
   }
 
+  public searchByFilters(filters: SearchFilters): Observable<any> {
+    // tslint:disable-next-line: max-line-length
+    let url =
+      'http://localhost:8860/api/search/filter?' +
+      '&itemOnPage=' + filters.itemOnPage +
+      '&currentPage=' + filters.currentPage +
+      '&ascending=' + filters.ascending;
+
+    if (filters.make !== undefined) {
+      url += '&make=' + filters.make;
+    }
+    if (filters.model !== undefined) {
+      url += '&model=' + filters.model;
+    }
+    if (filters.year !== undefined) {
+      url += '&year=' + filters.year;
+    }
+    if (filters.engine !== undefined) {
+      url += '&engine=' + filters.engine;
+    }
+    if (filters.fuel !== undefined) {
+      url += '&fuel=' + filters.fuel;
+    }
+    if (filters.transmission !== undefined) {
+      url += '&gear=' + filters.transmission;
+    }
+    if (filters.wd !== undefined) {
+      url += '&wheels_drive=' + filters.wd;
+    }
+    // '&hoursepower=' +
+    // filters.hoursepower +
+    // '&fuelconsumption=' +
+    // filters.fuelconsumption +
+    return this.http.get<any>(url).pipe(retry(1), catchError(this.handleError));
+  }
+
   public getMostPopular(): Observable<any[]> {
     return this.http
       .get<any[]>('http://localhost:8860/api/car/best')

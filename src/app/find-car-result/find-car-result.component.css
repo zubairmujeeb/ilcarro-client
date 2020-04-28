@@ -1,1 +1,6 @@
 /* No CSS *//*# sourceMappingURL=find-car-result.component.css.map */
+
+#map {
+  height: 600px;
+  width: 100%;
+ }

@@ -21,17 +21,8 @@ export class FindCarComponent implements OnInit {
   }
 
   onSubmit(): void {
-    this.ilcarroService.search(this.filters).subscribe(data => {
-      // tslint:disable-next-line: no-debugger
-      debugger;
-      // navigate to search-results
-      // tslint:disable-next-line: max-line-length
-      this.router.navigate(['../search-results'], { state: { data: { filters: this.filters, cars: data.content } } });
-    }, err => {
-      // tslint:disable-next-line: no-debugger
-      debugger;
-      alert(err);
-    });
+
+    this.router.navigate(['../search-results'], { state: { data: { filters: this.filters } } });
   }
 
 }
